@@ -55,11 +55,41 @@ class buffs:
         print("buffs:")
         pprint.pprint(attrs(self))
 
+class normalAtk:
+    def __init__(self):
+        self.hits = [] # 1~6
+        self.chargeAtk = [] # 1, 2
+        self.plunges = [] # plunge, low, high
+
+    def print(self):
+        print("normal attack:")
+        pprint.pprint(attrs(self))
+
+
+class skill:
+    def __init__(self):
+        self.DMG = []
+
+    def print(self):
+        print("skill:")
+        pprint.pprint(attrs(self))
+
+
+class burst:
+    def __init__(self):
+        self.DMG = []
+        self.engCost = 0
+    
+    def print(self):
+        print("burst:")
+        pprint.pprint(attrs(self))
+
 
 class character:
     def __init__(self, name):
 
         self.name = name
+        self.elementType = Element.Empty
 
         # Levels
         self.level = 1
@@ -68,10 +98,17 @@ class character:
         self.burstLvl = 1
         self.constellation = 1
 
+        # Stats
         self.baseStats = baseStats()
         self.advancedStats = advancedStats()
         self.buffs = buffs()
         self.elementStats = elementStats()
+
+        # Skills
+        self.normalAtk = normalAtk()
+        self.skill = skill()
+        self.burst = burst()
+
 
     def print(self):
         print(self.name)
@@ -80,3 +117,6 @@ class character:
         self.advancedStats.print()
         self.buffs.print()
         self.elementStats.print()
+        self.normalAtk.print()
+        self.skill.print()
+        self.burst.print()
