@@ -1,3 +1,6 @@
+
+import pprint
+
 from enum import Enum
 from utils import *
 
@@ -19,4 +22,4 @@ class elementStats:
     
     def print(self):
         print("element stats:")
-        print(attrs(self))
+        pprint.pprint(attrs(self))

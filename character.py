@@ -1,5 +1,4 @@
 
-from utils import *
 from element import *
 
 class baseStats:
@@ -17,7 +16,7 @@ class baseStats:
 
     def print(self):
         print("base stats:")
-        print(attrs(self))
+        pprint.pprint(attrs(self))
 
 
 class advancedStats:
@@ -32,7 +31,7 @@ class advancedStats:
 
     def print(self):
         print("advanced stats:")
-        print(attrs(self))
+        pprint.pprint(attrs(self))
 
 class buffs:
     def __init__(self):
@@ -54,7 +53,7 @@ class buffs:
 
     def print(self):
         print("buffs:")
-        print(attrs(self))
+        pprint.pprint(attrs(self))
 
 
 class character:
@@ -76,7 +75,7 @@ class character:
 
     def print(self):
         print(self.name)
-        print(attrs(self))
+        pprint.pprint(attrs(self))
         self.baseStats.print()
         self.advancedStats.print()
         self.buffs.print()
